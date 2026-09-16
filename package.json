@@ -1,0 +1,13 @@
+{
+  "name": "roomly-kfupm",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sync:261": "node scripts/sync-term-261.mjs",
+    "serve": "python3 -m http.server 4173"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}

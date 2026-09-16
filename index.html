@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f2ed" />
+    <meta
+      name="description"
+      content="Find classrooms that are free between lectures at KFUPM."
+    />
+    <title>Roomly — KFUPM empty room finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Roomly home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M7 8.5h11.5c3.6 0 6.5 2.9 6.5 6.5s-2.9 6.5-6.5 6.5H7V8.5Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+              <path d="M7 21.5V26M13 21.5V26M19 21.5V26" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M19 15h.01" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>roomly</span>
+        </a>
+        <div class="topbar-actions">
+          <span class="term-badge"><span class="status-dot"></span> TERM 261</span>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+            <span id="theme-icon" class="theme-icon" aria-hidden="true">☾</span>
+            <span id="theme-label">Dark mode</span>
+          </button>
+          <a class="source-link" href="https://registrar.kfupm.edu.sa/course-offerings" target="_blank" rel="noreferrer">
+            <span>Course offerings</span>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.75 11.25 11.25 4.75M6 4.75h5.25V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> KFUPM campus utility</div>
+            <h1 id="hero-title">Find a quiet room<br /><em>between classes.</em></h1>
+            <p class="hero-description">See which classrooms are free for your whole study window — without interrupting a lecture.</p>
+            <div class="hero-notes">
+              <span class="note-item"><span class="note-icon" aria-hidden="true">↗</span> No account needed</span>
+              <span class="note-item"><span class="note-icon check" aria-hidden="true">✓</span> Built for students</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+            <div class="art-card art-card-back"><span>ROOM</span><strong>24 — 201</strong></div>
+            <div class="art-card art-card-front">
+              <div class="art-card-top"><span class="mini-status"></span><span>FREE NOW</span><span class="art-arrow">↗</span></div>
+              <strong>24 — 204</strong>
+              <span class="art-card-caption">Building 24 · quiet</span>
+            </div>
+            <div class="art-spark spark-one">✦</div>
+            <div class="art-spark spark-two">✦</div>
+          </div>
+        </section>
+
+        <section class="finder-layout" aria-label="Room finder">
+          <div class="finder-card">
+            <div class="finder-card-heading">
+              <div>
+                <p class="section-kicker">Room finder</p>
+                <h2>Tell us when you need it.</h2>
+              </div>
+              <span class="privacy-badge">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.2 13 4v3.45c0 3.08-2.1 5.35-5 6.35-2.9-1-5-3.27-5-6.35V4l5-1.8Z" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/><path d="m5.8 8 1.45 1.45L10.4 6.3" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                No login
+              </span>
+            </div>
+
+            <div class="filter-step step-day">
+              <div class="step-label"><span class="step-number">01</span><div><strong>Choose a day</strong><small>U · M · T · W · R</small></div></div>
+              <div class="day-grid" role="radiogroup" aria-label="Choose a day">
+                <button class="day-option" type="button" data-day="U" role="radio"><span>Sun</span><b>U</b></button>
+                <button class="day-option" type="button" data-day="M" role="radio"><span>Mon</span><b>M</b></button>
+                <button class="day-option" type="button" data-day="T" role="radio"><span>Tue</span><b>T</b></button>
+                <button class="day-option" type="button" data-day="W" role="radio"><span>Wed</span><b>W</b></button>
+                <button class="day-option" type="button" data-day="R" role="radio"><span>Thu</span><b>R</b></button>
+              </div>
+            </div>
+
+            <div class="filter-step step-time">
+              <div class="step-label"><span class="step-number">02</span><div><strong>Pick a time window</strong><small>Rooms must be free from entry to exit</small></div></div>
+              <div class="time-controls">
+                <label class="field-label" for="entry-time">Entry time
+                  <select id="entry-time" class="select-control"></select>
+                </label>
+                <label class="field-label" for="exit-time">Exit time
+                  <select id="exit-time" class="select-control"></select>
+                </label>
+              </div>
+              <div class="time-summary"><span class="summary-clock">◷</span><span id="time-summary-text">Monday · 10:00 AM — 11:00 AM</span></div>
+            </div>
+
+            <div class="filter-step step-building">
+              <div class="step-label"><span class="step-number">03</span><div><strong>Choose a building</strong><small>Where do you want to study?</small></div></div>
+              <div class="building-tools">
+                <label class="building-search-label" for="building-search">Filter by building number
+                  <input id="building-search" class="building-search" type="search" inputmode="numeric" autocomplete="off" placeholder="e.g. 24" />
+                </label>
+                <span id="building-count" class="building-count" aria-live="polite"></span>
+              </div>
+              <div id="building-grid" class="building-grid" role="radiogroup" aria-label="Choose a building"></div>
+            </div>
+
+            <div class="finder-footer">
+              <div class="code-key"><span class="key-dot"></span><span><b>Day codes</b> U = Sun · M = Mon · T = Tue · W = Wed · R = Thu</span></div>
+              <button type="button" id="reset-button" class="reset-button">Reset filters <span>↺</span></button>
+            </div>
+          </div>
+
+          <aside class="how-it-works">
+            <p class="section-kicker">How it works</p>
+            <h2>Quietly find your next spot.</h2>
+            <div class="how-list">
+              <div class="how-item"><span>01</span><p><b>Pick your window</b><br />Tell us the day, entry time, and exit time.</p></div>
+              <div class="how-item"><span>02</span><p><b>We check every class</b><br />TERM 261 offerings are matched by day and exact room.</p></div>
+              <div class="how-item"><span>03</span><p><b>Walk in with confidence</b><br />Only rooms free from entry to exit make the list.</p></div>
+            </div>
+            <div class="tip-card"><span class="tip-icon">✦</span><div><b>Good to know</b><p>Double-check the room before settling in — schedules can change.</p></div></div>
+          </aside>
+        </section>
+
+        <section class="results-section" aria-labelledby="results-title">
+          <div class="results-header">
+            <div>
+              <div class="results-title-row"><h2 id="results-title">Available rooms</h2><span id="result-count" class="count-badge">0 rooms</span></div>
+              <p id="results-subtitle">Showing rooms free for your full window.</p>
+            </div>
+            <div class="results-meta"><span class="live-dot"></span><span id="data-status">TERM 261 preview data</span><button id="refresh-button" class="refresh-button" type="button" aria-label="Refresh room data">↻</button></div>
+          </div>
+          <div id="results-grid" class="results-grid" aria-live="polite"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <div class="empty-illustration">⌁</div>
+            <h3>No rooms free for that window.</h3>
+            <p>Try a different time window or another building.</p>
+          </div>
+        </section>
+
+        <section class="source-strip">
+          <div class="source-strip-icon" aria-hidden="true">↗</div>
+          <div><b>Schedule source</b><span>Room availability is calculated from KFUPM’s official course offerings format for TERM 261.</span></div>
+          <a href="https://registrar.kfupm.edu.sa/course-offerings" target="_blank" rel="noreferrer">Open official source <span>↗</span></a>
+        </section>
+      </main>
+
+      <footer class="footer"><span>roomly · a student-made KFUPM utility</span><span>Rooms are first-come, first-served.</span></footer>
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
