@@ -3,7 +3,7 @@
   "source": "https://registrar.kfupm.edu.sa/course-offerings",
   "sourceTermCode": "202610",
   "mode": "synced",
-  "fetchedAt": "2026-09-20T10:33:20.078Z",
+  "fetchedAt": "2026-09-21T11:52:53.688Z",
   "departmentCount": 33,
   "offeringCount": 2873,
   "note": "Synced from the official TERM 261 Course Offering page. Rooms observed in offering rows are included; add a verified room inventory separately to include rooms with no scheduled offering.",
@@ -12769,7 +12769,7 @@
       "days": "M W",
       "start": "12:30",
       "end": "13:45",
-      "location": "24-250",
+      "location": "22-132",
       "instructionalMethod": ""
     },
     {
