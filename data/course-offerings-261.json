@@ -3,7 +3,7 @@
   "source": "https://registrar.kfupm.edu.sa/course-offerings",
   "sourceTermCode": "202610",
   "mode": "synced",
-  "fetchedAt": "2026-09-27T11:19:02.178Z",
+  "fetchedAt": "2026-10-01T12:21:37.583Z",
   "departmentCount": 33,
   "offeringCount": 2873,
   "note": "Synced from the official TERM 261 Course Offering page. Rooms observed in offering rows are included; add a verified room inventory separately to include rooms with no scheduled offering.",
@@ -8449,7 +8449,7 @@
       "days": "W",
       "start": "10:00",
       "end": "10:50",
-      "location": "4-210",
+      "location": "4-211",
       "instructionalMethod": ""
     },
     {
@@ -8479,7 +8479,7 @@
       "days": "W",
       "start": "11:00",
       "end": "11:50",
-      "location": "4-210",
+      "location": "4-211",
       "instructionalMethod": ""
     },
     {
@@ -14792,9 +14792,9 @@
       "departmentCode": "EE",
       "department": "Electrical Engineering",
       "days": "U T",
-      "start": "20:10",
-      "end": "21:25",
-      "location": "59-2011",
+      "start": "19:15",
+      "end": "20:30",
+      "location": "59-1009",
       "instructionalMethod": ""
     },
     {
