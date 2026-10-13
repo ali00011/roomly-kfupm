@@ -3,7 +3,7 @@
   "source": "https://registrar.kfupm.edu.sa/course-offerings",
   "sourceTermCode": "202610",
   "mode": "synced",
-  "fetchedAt": "2026-10-11T12:02:20.705Z",
+  "fetchedAt": "2026-10-13T13:28:25.503Z",
   "departmentCount": 33,
   "offeringCount": 2957,
   "note": "Synced from the official TERM 261 Course Offering page. Rooms observed in offering rows are included; add a verified room inventory separately to include rooms with no scheduled offering.",
@@ -3754,7 +3754,7 @@
       "days": "U T",
       "start": "18:45",
       "end": "20:00",
-      "location": "63-024",
+      "location": "63-228",
       "instructionalMethod": ""
     },
     {
@@ -10234,7 +10234,7 @@
       "days": "U T",
       "start": "18:45",
       "end": "20:00",
-      "location": "4-101",
+      "location": "3-114",
       "instructionalMethod": ""
     },
     {
@@ -24567,7 +24567,7 @@
       "section": "01",
       "activity": "LEC",
       "crn": "13239",
-      "courseName": "Information Security",
+      "courseName": "ICS 344: Information Security",
       "instructor": "GREGORY EPIPHANIOU",
       "departmentCode": "ICS",
       "department": "Information & Computer Science",
